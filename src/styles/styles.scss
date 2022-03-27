@@ -1,0 +1,227 @@
+
+@import '../variablescss/variables.scss';
+
+@mixin buttonStyle(){
+    width: 200px;
+        height: 40px;
+        background-color: $blackColor;
+        border:none;
+        border-radius: 8px;
+        color:$whiteColor;
+        font-size: 20px; 
+}
+
+@mixin mainMakeup(){
+    align-items:center;
+    display:flex;
+    flex-direction: column;
+   
+    border-radius: 10px;
+}
+@mixin mainMakeupPic(){
+    height: 150px;
+        width:  150px;
+        padding: 0px;
+}
+@mixin mainMakeupTitle(){
+    background-color: $blackColor;
+    width: 100%;
+    height: 50px;;
+    color: white;
+    font-Size: 26px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius:  10px 10px;
+    transition: background-color 1s, color 1s;
+}
+@mixin mainMakeupTitleHov(){
+    background-color: white;
+    color:$blackColor;
+    border: solid $blackColor 1px;
+}
+    .navbar{
+        width: 100%;
+        height: 60px;
+        background-color: $blackColor;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;;
+        flex-wrap: wrap;
+    }
+  
+    .navbar a{
+        color: $whiteColor;
+        font-size: 25px;
+        text-decoration: none;
+        font-family: $titleFont;
+        margin: 10px;
+        
+    }
+
+ .hamflex{
+    flex-grow: 1;
+ }
+    .hamburger{
+        display: block;
+        width: 35px;
+       
+        cursor: pointer;
+        // appearance: none;
+        // background: none;
+        // outline:none;
+        border: none;
+       
+    }
+    .hamburger .bar, .hamburger::before, .hamburger::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: white;
+        margin:6px 0px;
+        transition: 0.4s;
+    }
+    .hamburger.is-active::before{
+        transform:rotate(-45deg) translate(-10px,8px);
+    }
+    .hamburger.is-active::after{
+        transform:rotate(45deg) translate(-8px,-6px);
+    }
+    .hamburger.is-active .bar{
+        opacity: 0;
+    }
+  
+    div .links{
+        margin-right:30px;
+    }
+    .nav-page{
+      display: block;
+      position:fixed;
+      top: 8;
+      left:0;
+      width: 250px;
+      min-height: 90vh;  
+      z-index: 98;
+      background-color: white;
+      padding-top: 120px;
+      transition: 0.4s
+
+      a{
+          display: flex;
+          flex-direction: column;
+          row-gap: 40px;
+          justify-content: flex-start;
+          color: $darkRedColor;
+
+      }
+
+    }
+
+    .nav-page:active{
+left: 0;
+    }
+    button{
+       @include buttonStyle();
+      
+    }
+
+    .mainHeader{
+        background-image: url('../images/makeupbag.jpg');
+        background-size:cover;
+        height:550px;
+        width: 65%;
+        font-size: 20px;
+        font-family: $prettyFont;
+        color: $darkRedColor;
+        border: solid $redColor 12px;
+      
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+    .mainSection{
+        padding:3px;
+        margin: 75px 15px;
+       
+    }
+    .flexSection{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 65px;
+        row-gap: 50px;
+        
+
+    }
+    .blush, .eyeshadow, .foundation, .mascara, .nailpolish, .lipstick, .bronzer, .lipliner{
+    @include mainMakeup()
+      
+       
+    }
+    .blushPic, .eyeshadowPic, .foundationPic, .mascaraPic, .nailpolishPic , .lipstickPic, .bronzerPic, .liplinerPic{
+    @include mainMakeupPic()
+    }
+  
+     .blushTitle, .eyeshadowTitle, .foundationTitle, .mascaraTitle, .nailpolishTitle, .lipstickTitle, .bronzerTitle, .liplinerTitle{
+  @include mainMakeupTitle()
+       
+    }
+
+.blushTitle:hover, .eyeshadowTitle:hover, .foundationTitle:hover, .mascaraTitle:hover, .nailpolishTitle:hover,
+.lipstickTitle:hover, .bronzerTitle:hover, .liplinerTitle:hover{
+@include mainMakeupTitleHov()
+
+}
+
+@media screen and(max-width:1100px){
+    .mainHeader{
+        height:550px;
+        width: 97%;
+        
+    }
+}
+@media screen and(max-width:750px){
+    .mainHeader{
+        height:400px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 16px;
+        
+    }
+}
+@media screen and(max-width:500px){
+    .mainHeader{
+        // background-image: url('../images/makeupbag.jpg');
+        height:280px;
+        width: auto;
+        font-size: 14px;
+       
+       
+    }
+}
+    
+// .div1{
+// background-color: red;
+// height: 400px;
+// width:400px;
+
+// }
+// .div2{
+//     position: relative;
+//     background-color: yellow;
+//    left:30px;
+//    top: 30px;
+// height: 300px;
+// width:300px;
+
+
+// }
+// .div3{
+//     background-color: blue;
+//     height: 200px;
+//     width:200px;
+// }

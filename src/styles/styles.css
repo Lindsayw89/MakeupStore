@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #252020;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.navbar a {
+  color: #e8e8e8;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+}
+
+.hamflex {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.hamburger {
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  border: none;
+}
+
+.hamburger .bar, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+  -webkit-transform: rotate(-45deg) translate(-10px, 8px);
+          transform: rotate(-45deg) translate(-10px, 8px);
+}
+
+.hamburger.is-active::after {
+  -webkit-transform: rotate(45deg) translate(-8px, -6px);
+          transform: rotate(45deg) translate(-8px, -6px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+div .links {
+  margin-right: 30px;
+}
+
+.nav-page {
+  display: block;
+  position: fixed;
+  top: 8;
+  left: 0;
+  width: 250px;
+  min-height: 90vh;
+  z-index: 98;
+  background-color: white;
+  padding-top: 120px;
+  -webkit-transition: 0.4s a;
+  transition: 0.4s a;
+  transition-display: flex;
+  transition-flex-direction: column;
+  transition-row-gap: 40px;
+  transition-justify-content: flex-start;
+  transition-color: #701108;
+}
+
+.nav-page:active {
+  left: 0;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  background-color: #252020;
+  border: none;
+  border-radius: 8px;
+  color: #e8e8e8;
+  font-size: 20px;
+}
+
+.mainHeader {
+  background-image: url("../images/makeupbag.jpg");
+  background-size: cover;
+  height: 550px;
+  width: 65%;
+  font-size: 20px;
+  font-family: "Courgette", cursive;
+  color: #701108;
+  border: solid #BD281A 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainSection {
+  padding: 3px;
+  margin: 75px 15px;
+}
+
+.flexSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 65px;
+          column-gap: 65px;
+  row-gap: 50px;
+}
+
+.blush, .eyeshadow, .foundation, .mascara, .nailpolish, .lipstick, .bronzer, .lipliner {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+}
+
+.blushPic, .eyeshadowPic, .foundationPic, .mascaraPic, .nailpolishPic, .lipstickPic, .bronzerPic, .liplinerPic {
+  height: 150px;
+  width: 150px;
+  padding: 0px;
+}
+
+.blushTitle, .eyeshadowTitle, .foundationTitle, .mascaraTitle, .nailpolishTitle, .lipstickTitle, .bronzerTitle, .liplinerTitle {
+  background-color: #252020;
+  width: 100%;
+  height: 50px;
+  color: white;
+  font-Size: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px 10px;
+  -webkit-transition: background-color 1s, color 1s;
+  transition: background-color 1s, color 1s;
+}
+
+.blushTitle:hover, .eyeshadowTitle:hover, .foundationTitle:hover, .mascaraTitle:hover, .nailpolishTitle:hover,
+.lipstickTitle:hover, .bronzerTitle:hover, .liplinerTitle:hover {
+  background-color: white;
+  color: #252020;
+  border: solid #252020 1px;
+}
+
+@media screen and (max-width: 1100px) {
+  .mainHeader {
+    height: 550px;
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .mainHeader {
+    height: 400px;
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainHeader {
+    height: 280px;
+    width: auto;
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
