@@ -1,0 +1,18 @@
+
+.detailsFlex{
+   display: flex;
+   flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px;
+    section{
+        width:100px;
+    }
+}
+.muColors{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    
+}

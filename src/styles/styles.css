@@ -102,19 +102,19 @@ button {
 .mainHeader {
   background-image: url("../images/makeupbag.jpg");
   background-size: cover;
-  height: 550px;
+  height: 520px;
   width: 65%;
   font-size: 20px;
   font-family: "Courgette", cursive;
   color: #701108;
-  border: solid #BD281A 12px;
+  border: solid #BD281A 5px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .mainSection {
   padding: 3px;
-  margin: 75px 15px;
+  margin: 75px 45px;
 }
 
 .flexSection {
@@ -171,6 +171,7 @@ button {
   border-radius: 10px 10px;
   -webkit-transition: background-color 1s, color 1s;
   transition: background-color 1s, color 1s;
+  cursor: pointer;
 }
 
 .blushTitle:hover, .eyeshadowTitle:hover, .foundationTitle:hover, .mascaraTitle:hover, .nailpolishTitle:hover,
@@ -180,10 +181,10 @@ button {
   border: solid #252020 1px;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
   .mainHeader {
-    height: 550px;
-    width: 97%;
+    height: 510px;
+    width: 85%;
   }
 }
 
@@ -201,6 +202,9 @@ button {
         -ms-flex-align: end;
             align-items: flex-end;
     font-size: 16px;
+  }
+  .mainHeader .mainSection {
+    margin: 75px 15px;
   }
 }
 

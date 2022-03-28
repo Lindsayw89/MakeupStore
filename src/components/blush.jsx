@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import '../styles/styles.css'
-
+import {useNavigate} from 'react-router-dom'
 
 const Blush=()=> {
     const [blush, setBlush]=useState()
-
+const nav=useNavigate()
     useEffect(()=>{
 grabBlush()
     },[])
@@ -17,9 +17,15 @@ grabBlush()
              
             }
           }
+          try{
           const response=await axios(options)
           setBlush(response.data.slice(0,23))
           console.log(response.data)
+          }
+          catch(err){
+            console.log(err +'lindsay error handling')
+          }
+        
           
           }
 
@@ -30,7 +36,7 @@ grabBlush()
     <div>
         <section className="blush">
           <div>  <img className="blushPic" src={blush[7].api_featured_image}/></div>
-          <div className="blushTitle"> {blush[0].product_type} </div>
+          <button className="blushTitle" onClick={()=>{nav('./blushdetail')}}> {blush[0].product_type} </button>
         </section>
         
     </div>

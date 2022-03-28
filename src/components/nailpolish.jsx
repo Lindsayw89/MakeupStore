@@ -17,10 +17,14 @@ grabnailpolish()
              
             }
           }
+          try{
           const response=await axios(options)
           setNailpolish(response.data.slice(0,23))
           console.log(response.data)
-          
+        }
+        catch(err){
+          console.log(err +'lindsay error handling')
+        }
           }
 
           if(nailpolish){

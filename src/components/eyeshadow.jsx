@@ -17,9 +17,14 @@ grabEyeshadow()
              
             }
           }
+          try{
           const response=await axios(options)
           setEyeshadow(response.data.slice(0,23))
           console.log(response.data)
+        }
+          catch(err){
+            console.log(err +'lindsay error handling')
+          }
           
           }
 
