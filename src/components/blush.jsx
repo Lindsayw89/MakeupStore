@@ -36,7 +36,7 @@ grabBlush()
     <div>
         <section className="blush">
           <div>  <img className="blushPic" src={blush[7].api_featured_image}/></div>
-          <button className="blushTitle" onClick={()=>{nav('./blushdetail')}}> {blush[0].product_type} </button>
+          <button className="blushTitle" onClick={()=>{nav('./blushdetails')}}> {blush[0].product_type} </button>
         </section>
         
     </div>

@@ -27,4 +27,26 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+
+.productName {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.stars-outer {
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+}
 /*# sourceMappingURL=details.css.map */

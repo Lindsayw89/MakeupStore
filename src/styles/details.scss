@@ -16,3 +16,24 @@
     
     
 }
+.productName{
+    font-size: 12px;
+    font-weight: bold;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+  }
+
+
+
+

@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import '../styles/styles.css'
-
+import {useNavigate} from 'react-router-dom'
 
 const Bronzer=()=> {
     const [bronzer, setBronzer]=useState()
-
+    const nav=useNavigate()
     useEffect(()=>{
 grabBronzer()
     },[])
@@ -34,7 +34,7 @@ grabBronzer()
     <div>
         <section className="bronzer">
           <div>  <img className="bronzerPic" src={bronzer[7].api_featured_image}/></div>
-          <div className="bronzerTitle"> {bronzer[0].product_type} </div>
+          <button className="bronzerTitle" onClick={()=>{nav('./bronzerdetails')}}> {bronzer[0].product_type} </button>
         </section>
         
     </div>
