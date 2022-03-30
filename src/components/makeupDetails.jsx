@@ -46,7 +46,7 @@ if(makeup){
     <FaStar/>)}
     {mu.rating!==Math.floor(mu.rating) && <FaStarHalfAlt/>}
     {Array.apply(1,{length:5-mu.rating}).map(rate=>
-    <FaRegStar/>)}
+    <FaRegStar className="fa"/>)}
 
           <p className="productName">{mu.name}</p>
           <p className="price">${mu.price}</p>

@@ -1,12 +1,26 @@
 
+@import '../variablescss/variables.scss';
+
 .detailsFlex{
    display: flex;
    flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
     margin: 40px;
+    padding: 1px;
+
     section{
         width:100px;
+        padding: 1px;
+        transition: padding .5s, box-shadow .5s;
+
+      &:hover{
+          border: rgb(139, 133, 133) solid 1px;
+          border-radius: 5px;
+          padding: 4px;
+          box-shadow: 2px 3px 6px rgb(185, 185, 185);
+          
+      }  
     }
 }
 .muColors{
@@ -28,12 +42,19 @@
 }
 
 
-.stars-outer {
-    display: inline-block;
-    position: relative;
-    font-family: FontAwesome;
-  }
+.fa{
+    color: rgb(201, 201, 63);
+   fill: red;
+}
 
 
-
-
+.makeupName{
+    font-family: $prettyTitleFont;
+    font-size: 35px;
+    width:50%;
+    margin: 10px auto;
+    transition: color 1s;
+    &:hover{
+        color: $redColor;
+    }
+}

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Playfair+Display:ital@1&display=swap");
 .detailsFlex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10,10 +12,24 @@
       flex-wrap: wrap;
   gap: 30px;
   margin: 40px;
+  padding: 1px;
 }
 
 .detailsFlex section {
   width: 100px;
+  padding: 1px;
+  -webkit-transition: padding .5s, -webkit-box-shadow .5s;
+  transition: padding .5s, -webkit-box-shadow .5s;
+  transition: padding .5s, box-shadow .5s;
+  transition: padding .5s, box-shadow .5s, -webkit-box-shadow .5s;
+}
+
+.detailsFlex section:hover {
+  border: #8b8585 solid 1px;
+  border-radius: 5px;
+  padding: 4px;
+  -webkit-box-shadow: 2px 3px 6px #b9b9b9;
+          box-shadow: 2px 3px 6px #b9b9b9;
 }
 
 .muColors {
@@ -44,9 +60,21 @@
   font-size: 10px;
 }
 
-.stars-outer {
-  display: inline-block;
-  position: relative;
-  font-family: FontAwesome;
+.fa {
+  color: #c9c93f;
+  fill: red;
+}
+
+.makeupName {
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  width: 50%;
+  margin: 10px auto;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+}
+
+.makeupName:hover {
+  color: #BD281A;
 }
 /*# sourceMappingURL=details.css.map */

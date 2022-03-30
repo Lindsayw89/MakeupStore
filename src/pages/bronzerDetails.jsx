@@ -6,7 +6,7 @@ import MakeupDetails from '../components/makeupDetails'
 const BronzerDetail=()=> {
   return (
     <div>
-        <h3>Bronzer</h3>
+        <h3 className='makeupName'>Bronzer</h3>
         <MakeupDetails makeupType={"bronzer"}/>
     </div>
   )
