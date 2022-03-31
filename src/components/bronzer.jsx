@@ -12,7 +12,7 @@ grabBronzer()
     const grabBronzer=async()=>{
         var options = {
             method: 'GET',
-            url: 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=bronzer',
+            url: 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=bronzer',
             headers: {
              
             }

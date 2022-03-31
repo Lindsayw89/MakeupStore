@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import '../styles/styles.css'
-
+import {useNavigate} from 'react-router-dom'
 
 const Eyeshadow=()=> {
     const [eyeshadow, setEyeshadow]=useState()
-
+    const nav=useNavigate()
     useEffect(()=>{
 grabEyeshadow()
     },[])
     const grabEyeshadow=async()=>{
         var options = {
             method: 'GET',
-            url: 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=Eyeshadow',
+            url: 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=Eyeshadow',
             headers: {
              
             }
@@ -35,7 +35,8 @@ grabEyeshadow()
     <div>
         <section className="eyeshadow">
           <div>  <img className="eyeshadowPic" src={eyeshadow[20].api_featured_image}/></div>
-          <div className="eyeshadowTitle"> {eyeshadow[0].product_type} </div>
+         
+          <button className="eyeshadowTitle" onClick={()=>{nav('./eyeshadowdetails')}}> {eyeshadow[0].product_type} </button>
         </section>
         
     </div>

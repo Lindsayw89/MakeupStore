@@ -6,6 +6,12 @@ import Navbar from './components/navbar';
 import MakeupDetails from './components/makeupDetails'; 
 import BlushDetail from './pages/blushDetail';
 import BronzerDetail from './pages/bronzerDetails';
+import FoundationDetail from './pages/foundationDetails';
+import LiplinerDetail from './pages/liplinerDetail'; 
+import EyeshadowDetail from './pages/eyeshadowDetail';
+import LipstickDetail from './pages/lipstickDetail';
+import MascaraDetail from './pages/mascaraDetail';
+import NailpolishDetail from './pages/nailpolishDetail';
 
 
 function App() {
@@ -18,6 +24,12 @@ function App() {
        <Route path='/details' element={<MakeupDetails/>} />
        <Route path='/blushdetails' element={<BlushDetail/>} />
        <Route path='/bronzerdetails' element={<BronzerDetail/>} />
+       <Route path='/eyeshadowdetails' element={<EyeshadowDetail/>} />
+       <Route path='/liplinerdetails' element={<LiplinerDetail/>} />
+       <Route path='/lipstickdetails' element={<LipstickDetail/>} />
+       <Route path='/mascaradetails' element={<MascaraDetail/>} />
+       <Route path='/nailpolishdetails' element={<NailpolishDetail/>} />
+       <Route path='/foundationdetails' element={<FoundationDetail/>} />
     </Routes>
  </BrowserRouter>
 

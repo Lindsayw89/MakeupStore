@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import '../styles/styles.css'
-
+import {useNavigate} from 'react-router-dom'
 
 const Lipliner=()=> {
     const [lipliner, setLipliner]=useState()
-
+    const nav=useNavigate()
     useEffect(()=>{
 grablipliner()
     },[])
     const grablipliner=async()=>{
         var options = {
             method: 'GET',
-            url: 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=lip_liner',
+            url: 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=lip_liner',
             headers: {
              
             }
@@ -35,7 +35,8 @@ grablipliner()
     <div>
         <section className="lipliner">
           <div>  <img className="liplinerPic" src={lipliner[0].api_featured_image}/></div>
-          <div className="liplinerTitle"> {lipliner[0].product_type.replace("_", " ")} </div>
+          
+          <button className="liplinerTitle" onClick={()=>{nav('./liplinerdetails')}}> {lipliner[0].product_type.replace("_", " ")} </button>
         </section>
         
     </div>

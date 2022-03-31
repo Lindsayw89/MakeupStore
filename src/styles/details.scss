@@ -5,6 +5,7 @@
    display: flex;
    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin: 40px;
     padding: 1px;
@@ -44,7 +45,7 @@
 
 .fa{
     color: rgb(201, 201, 63);
-   fill: red;
+   fill: black;
 }
 
 
@@ -57,4 +58,34 @@
     &:hover{
         color: $redColor;
     }
+}
+
+.flexForm{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 15px;
+
+}
+input{
+    background-color: $blackColor;
+    color: $whiteColor;
+    border:none;
+    border-radius: 15px 0px 0px 15px;
+    height: 20px;
+    padding: 3px;
+
+ 
+      
+}
+
+.searchBtn{
+    background-color: $blackColor;
+    color: $whiteColor;
+    border:none;
+    border-radius: 0px 15px 15px 0px;
+    height: 26px;
+    padding-right: 13px;
+    
+    ;
 }

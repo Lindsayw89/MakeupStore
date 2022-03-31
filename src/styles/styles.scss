@@ -2,7 +2,7 @@
 @import '../variablescss/variables.scss';
 
 @mixin buttonStyle(){
-    width: 200px;
+   
         height: 40px;
         background-color: $blackColor;
         border:none;
@@ -62,11 +62,12 @@
 
  .hamflex{
     flex-grow: 1;
+   
  }
     .hamburger{
         display: block;
         width: 35px;
-       
+        @include buttonStyle();
         cursor: pointer;
         // appearance: none;
         // background: none;
@@ -122,10 +123,7 @@
     .nav-page:active{
 left: 0;
     }
-    button{
-       @include buttonStyle();
-      
-    }
+  
 
     .mainHeader{
         background-image: url('../images/makeupbag.jpg');

@@ -10,6 +10,9 @@
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
   margin: 40px;
   padding: 1px;
@@ -62,7 +65,7 @@
 
 .fa {
   color: #c9c93f;
-  fill: red;
+  fill: black;
 }
 
 .makeupName {
@@ -76,5 +79,37 @@
 
 .makeupName:hover {
   color: #BD281A;
+}
+
+.flexForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: 15px;
+}
+
+input {
+  background-color: #252020;
+  color: #e8e8e8;
+  border: none;
+  border-radius: 15px 0px 0px 15px;
+  height: 20px;
+  padding: 3px;
+}
+
+.searchBtn {
+  background-color: #252020;
+  color: #e8e8e8;
+  border: none;
+  border-radius: 0px 15px 15px 0px;
+  height: 26px;
+  padding-right: 13px;
 }
 /*# sourceMappingURL=details.css.map */

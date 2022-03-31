@@ -20,7 +20,7 @@ const Main=()=>{
     const grabMakeup=async()=>{
         var options = {
             method: 'GET',
-            url: 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner',
+            url: 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=eyeliner',
             headers: {
              
             }

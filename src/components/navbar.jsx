@@ -15,14 +15,14 @@ const Navbar=()=> {
       </div>
    <div className="links"> 
     <a href ="./">Home </a>
-    <a  href ="./home">About </a>
-    <a  href ="./home">Profile </a>
+    <a  href ="./home">Find a store </a>
+    
     </div>
     </nav>
     {menuOpen && <nav className="nav-page">
-      <a href="#"> menu1</a>
-      <a href="#"> menu2</a>
-      <a href="#"> menu3</a>
+      <a href="#"> Top Rated</a>
+      <a href="#"> Specials</a>
+     
     </nav>}
     </div>
   )

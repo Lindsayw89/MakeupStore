@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import '../styles/styles.css'
-
+import {useNavigate} from 'react-router-dom'
 
 const Foundation=()=> {
     const [foundation, setFoundation]=useState()
-
+    const nav=useNavigate()
     useEffect(()=>{
 grabfoundation()
     },[])
     const grabfoundation=async()=>{
         var options = {
             method: 'GET',
-            url: 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation',
+            url: 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=foundation',
             headers: {
              
             }
@@ -36,7 +36,8 @@ grabfoundation()
     <div>
         <section className="foundation">
           <div>  <img className="foundationPic" src={foundation[7].api_featured_image}/></div>
-          <div className="foundationTitle"> {foundation[0].product_type} </div>
+          
+          <button className="foundationTitle" onClick={()=>{nav('./foundationdetails')}}> {foundation[0].product_type} </button>
         </section>
         
     </div>

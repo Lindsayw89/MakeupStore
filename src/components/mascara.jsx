@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import '../styles/styles.css'
-
+import {useNavigate} from 'react-router-dom'
 
 const Mascara=()=> {
     const [mascara, setMascara]=useState()
-
+    const nav=useNavigate()
     useEffect(()=>{
 grabmascara()
     },[])
     const grabmascara=async()=>{
         var options = {
             method: 'GET',
-            url: 'http://makeup-api.herokuapp.com/api/v1/products.json?product_type=mascara',
+            url: 'https://makeup-api.herokuapp.com/api/v1/products.json?product_type=mascara',
             headers: {
              
             }
@@ -35,7 +35,8 @@ grabmascara()
     <div>
         <section className="mascara">
           <div>  <img className="mascaraPic" src={mascara[0].api_featured_image}/></div>
-          <div className="mascaraTitle"> {mascara[0].product_type} </div>
+          
+          <button className="mascaraTitle" onClick={()=>{nav('./mascaradetails')}}> {mascara[0].product_type} </button>
         </section>
         
     </div>
