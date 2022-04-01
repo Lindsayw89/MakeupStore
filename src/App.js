@@ -12,7 +12,7 @@ import EyeshadowDetail from './pages/eyeshadowDetail';
 import LipstickDetail from './pages/lipstickDetail';
 import MascaraDetail from './pages/mascaraDetail';
 import NailpolishDetail from './pages/nailpolishDetail';
-
+import ProductDetails from './pages/productDetails';
 
 function App() {
   return (
@@ -30,6 +30,7 @@ function App() {
        <Route path='/mascaradetails' element={<MascaraDetail/>} />
        <Route path='/nailpolishdetails' element={<NailpolishDetail/>} />
        <Route path='/foundationdetails' element={<FoundationDetail/>} />
+       <Route path='/productdetails/:type/:id' element={<ProductDetails/>} />
     </Routes>
  </BrowserRouter>
 

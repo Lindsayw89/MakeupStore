@@ -14,8 +14,8 @@ const Navbar=()=> {
       </button>)}
       </div>
    <div className="links"> 
-    <a href ="./">Home </a>
-    <a  href ="./home">Find a store </a>
+    <a href ="/">Home </a>
+    <a  href ="/home">Find a store </a>
     
     </div>
     </nav>

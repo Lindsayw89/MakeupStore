@@ -9,10 +9,13 @@ import {useNavigate} from 'react-router-dom'
 
 const MakeupDetails=({makeupType})=> {
 const [makeup, setMakeup]=useState()
+const [searchMakeup, setSearchMakeup]=useState()
+const [searchvalue, setSearchValue]=useState('')
+const nav=useNavigate()
 useEffect(()=>{
     grabMakeup()
 },[])
-
+ //setSearchMakeup(makeup.filter(mu=>mu.name.toLowerCase().includes(searchvalue)))
     const grabMakeup=async()=>{
         var options = {
             method: 'GET',
@@ -23,7 +26,7 @@ useEffect(()=>{
           }
           try{
           const response=await axios(options)
-          setMakeup(response.data)
+          setMakeup(response.data.filter(mu=>mu.name.toLowerCase().includes(searchvalue)))
           console.log(response.data)
           }
           catch(err){
@@ -31,13 +34,17 @@ useEffect(()=>{
           }
         
           
-          }
+    }
+   const search=(q)=>{
+       console.log(q)
+      setMakeup(makeup.filter(mu=>mu.name.toLowerCase().includes(q)))
+   } 
 
-if(makeup){
+if(makeup  ){
   return (
   <div>
   <form className="flexForm"> 
-  <input type="text" placeholder='search..'/>
+  <input onChange={(e)=>{setSearchValue(e.target.value)}} value={searchvalue} type="text" placeholder='search..'/>
   <button className="searchBtn" type='submit'><BsSearch/></button>
   </form>
   
@@ -45,10 +52,13 @@ if(makeup){
      
  
 
-{makeup.map(mu=>{
+{makeup.filter(m=>m.name.toLowerCase().includes(searchvalue.toLowerCase()) ||m.brand.toLowerCase().includes(searchvalue.toLowerCase())   ).map(mu=>{
     return(
         <section key={mu.id} >
-          <img src={mu.image_link} style={{height: '90px', width: '90px'}}/>
+         {/* onClick={()=>{nav(`/productdetails/${mu.product_type}/${mu.id}`)}}  */}
+             <a href={mu.product_link} target="blank"> 
+          <img  src={mu.image_link} style={{height: '90px', width: '90px'}}/>
+          </a> 
    {mu.rating}
    <br></br>
 {console.log(Array.apply(1,{length:mu.rating}))}

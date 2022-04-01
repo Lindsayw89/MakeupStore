@@ -41,7 +41,7 @@ if(makeup){
 <h1> Check out our amazing new blushes!</h1>
      </header>
      
-            <button>click here</button>
+            
             <section className='mainSection flexSection'>
                 <Blush/>
                 <Eyeshadow/>

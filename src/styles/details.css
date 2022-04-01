@@ -30,7 +30,7 @@
 .detailsFlex section:hover {
   border: #8b8585 solid 1px;
   border-radius: 5px;
-  padding: 4px;
+  padding: 1px;
   -webkit-box-shadow: 2px 3px 6px #b9b9b9;
           box-shadow: 2px 3px 6px #b9b9b9;
 }
