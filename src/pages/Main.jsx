@@ -31,6 +31,22 @@ const Main=()=>{
     console.log(response.data)
     
     }
+    const getPeople=async()=>{
+        const options={
+            method: 'get',
+            headers: {
+                'Accept':'application/json',
+                'Content-Type':'application/json'
+            },
+            url:'https://swapi.dev/api/people'
+        }
+        const response= await axios(options)
+        console.log(response.data)
+    
+       
+    }
+    getPeople()
+    
 
 
 
