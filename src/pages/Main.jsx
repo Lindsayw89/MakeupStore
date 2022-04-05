@@ -70,6 +70,9 @@ if(makeup){
 
                 
             </section>
+            <section className='rewards'>
+                Join our Rewards Program!
+            </section>
 
     </div>
     )

@@ -60,69 +60,11 @@
         
     }
 
- .hamflex{
+  .menuGrow{
     flex-grow: 1;
    
  }
-    .hamburger{
-        display: block;
-        width: 35px;
-        @include buttonStyle();
-        cursor: pointer;
-        // appearance: none;
-        // background: none;
-        // outline:none;
-        border: none;
-       
-    }
-    .hamburger .bar, .hamburger::before, .hamburger::after{
-        content: '';
-        display: block;
-        width: 100%;
-        height: 5px;
-        background-color: white;
-        margin:6px 0px;
-        transition: 0.4s;
-    }
-    .hamburger.is-active::before{
-        transform:rotate(-45deg) translate(-10px,8px);
-    }
-    .hamburger.is-active::after{
-        transform:rotate(45deg) translate(-8px,-6px);
-    }
-    .hamburger.is-active .bar{
-        opacity: 0;
-    }
-  
-    div .links{
-        margin-right:30px;
-    }
-    .nav-page{
-      display: block;
-      position:fixed;
-      top: 8;
-      left:0;
-      width: 250px;
-      min-height: 90vh;  
-      z-index: 98;
-      background-color: white;
-      padding-top: 120px;
-      transition: 0.4s
-
-      a{
-          display: flex;
-          flex-direction: column;
-          row-gap: 40px;
-          justify-content: flex-start;
-          color: $darkRedColor;
-
-      }
-
-    }
-
-    .nav-page:active{
-left: 0;
-    }
+   
   
 
     .mainHeader{
@@ -174,6 +116,97 @@ left: 0;
 
 }
 
+.rewards{
+    height: 60px;
+    width: 80%;
+    margin: 15% 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $redColor;
+    border-radius: 15px;
+    color: $whiteColor;
+    &:hover{
+        box-shadow: 2px 2px 6px $blackColor;
+    }
+}
+
+
+//newnav
+.navbar{
+    background-color: $blackColor;
+    margin-bottom: 15px;
+    height: 60px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+
+}
+.menu-bars{
+    margin-left: 2rem;
+    font-size: 2rem;
+    background: none;
+    color: $whiteColor;
+}
+.nav-menu{
+    background-color: $blackColor;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left: -100%;
+    transition: 1050ms;
+
+}
+.nav-menu.active{
+    left: 0;
+    transition: 1350ms;
+}
+.nav-text{
+    display: flex;
+justify-content: center;
+align-items: center;
+padding: 8px 0px 8px 16px;
+list-style: none;
+height: 60px;
+a{
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+}
+a:hover{
+    background-color: $redColor
+        
+}
+}
+.nav-menu-items{
+    width: 100%;
+
+}
+.navbar-toggle{
+background-color:$blackColor;
+width: 100%;
+height: 80px;
+display: flex;
+justify-content: start;
+align-items: center;
+
+}
+
+
+
+
+
+
 @media screen and(max-width:1000px){
     .mainHeader{
         height:510px;
@@ -205,24 +238,67 @@ left: 0;
     }
 }
     
-// .div1{
-// background-color: red;
-// height: 400px;
-// width:400px;
+
+// .hamburger{
+//     display: block;
+//     width: 35px;
+//     @include buttonStyle();
+//     cursor: pointer;
+//     // appearance: none;
+//     // background: none;
+//     // outline:none;
+//     border: none;
+   
+// }
+// .hamburger .bar, .hamburger::before, .hamburger::after{
+//     content: '';
+//     display: block;
+//     width: 100%;
+//     height: 5px;
+//     background-color: white;
+//     margin:6px 0px;
+//     transition: 0.4s;
+//     border-radius: 5px;
+// }
+// .hamburger.is-active::before{
+//     transform:rotate(-45deg) translate(-10px,8px);
+// }
+// .hamburger.is-active::after{
+//     transform:rotate(45deg) translate(-8px,-6px);
+// }
+// .hamburger.is-active .bar{
+//     opacity: 0;
+// }
+
+// div .links{
+//     margin-right:30px;
+// }
+// .nav-page{
+//   display: block;
+//   position:fixed;
+//   top: 8;
+//   left:0;
+//   width:220px;
+//   min-height: 90vh;  
+// transform: translate(-100%);
+// transition: all .4s;
+//   background-color: $whiteColor;
+//   padding-top: 120px;
+//   transition: width 0.4s;
+//   display: flex;
+//   flex-direction: column;
+//   row-gap: 20px;
+
+//   a{
+//      text-decoration: none;
+//       color: $darkRedColor;
+//       font-family: $titleFont;
+//   }
+
 
 // }
-// .div2{
-//     position: relative;
-//     background-color: yellow;
-//    left:30px;
-//    top: 30px;
-// height: 300px;
-// width:300px;
 
-
-// }
-// .div3{
-//     background-color: blue;
-//     height: 200px;
-//     width:200px;
+// .nav-page:active{
+// display: block;
+// width: 400px;
 // }

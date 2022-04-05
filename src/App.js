@@ -13,11 +13,14 @@ import LipstickDetail from './pages/lipstickDetail';
 import MascaraDetail from './pages/mascaraDetail';
 import NailpolishDetail from './pages/nailpolishDetail';
 import ProductDetails from './pages/productDetails';
+import TopRated from './pages/TopRated';
 
-function App() {
+
+  function App() {
   return (
     <div className="App">
       <Navbar/>
+ 
    <BrowserRouter>
     <Routes>
        <Route path='/' element={<Main/>} />
@@ -30,7 +33,9 @@ function App() {
        <Route path='/mascaradetails' element={<MascaraDetail/>} />
        <Route path='/nailpolishdetails' element={<NailpolishDetail/>} />
        <Route path='/foundationdetails' element={<FoundationDetail/>} />
+       
        <Route path='/productdetails/:type/:id' element={<ProductDetails/>} />
+       <Route path='/toprated' element={<TopRated/>} />
     </Routes>
  </BrowserRouter>
 

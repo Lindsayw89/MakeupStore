@@ -25,75 +25,10 @@
   margin: 10px;
 }
 
-.hamflex {
+.menuGrow {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-.hamburger {
-  display: block;
-  width: 35px;
-  height: 40px;
-  background-color: #252020;
-  border: none;
-  border-radius: 8px;
-  color: #e8e8e8;
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-}
-
-.hamburger .bar, .hamburger::before, .hamburger::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 5px;
-  background-color: white;
-  margin: 6px 0px;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.hamburger.is-active::before {
-  -webkit-transform: rotate(-45deg) translate(-10px, 8px);
-          transform: rotate(-45deg) translate(-10px, 8px);
-}
-
-.hamburger.is-active::after {
-  -webkit-transform: rotate(45deg) translate(-8px, -6px);
-          transform: rotate(45deg) translate(-8px, -6px);
-}
-
-.hamburger.is-active .bar {
-  opacity: 0;
-}
-
-div .links {
-  margin-right: 30px;
-}
-
-.nav-page {
-  display: block;
-  position: fixed;
-  top: 8;
-  left: 0;
-  width: 250px;
-  min-height: 90vh;
-  z-index: 98;
-  background-color: white;
-  padding-top: 120px;
-  -webkit-transition: 0.4s a;
-  transition: 0.4s a;
-  transition-display: flex;
-  transition-flex-direction: column;
-  transition-row-gap: 40px;
-  transition-justify-content: flex-start;
-  transition-color: #701108;
-}
-
-.nav-page:active {
-  left: 0;
 }
 
 .mainHeader {
@@ -176,6 +111,128 @@ div .links {
   background-color: white;
   color: #252020;
   border: solid #252020 1px;
+}
+
+.rewards {
+  height: 60px;
+  width: 80%;
+  margin: 15% 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #BD281A;
+  border-radius: 15px;
+  color: #e8e8e8;
+}
+
+.rewards:hover {
+  -webkit-box-shadow: 2px 2px 6px #252020;
+          box-shadow: 2px 2px 6px #252020;
+}
+
+.navbar {
+  background-color: #252020;
+  margin-bottom: 15px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+  color: #e8e8e8;
+}
+
+.nav-menu {
+  background-color: #252020;
+  width: 200px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  -webkit-transition: 1050ms;
+  transition: 1050ms;
+}
+
+.nav-menu.active {
+  left: 0;
+  -webkit-transition: 1350ms;
+  transition: 1350ms;
+}
+
+.nav-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #BD281A;
+}
+
+.nav-menu-items {
+  width: 100%;
+}
+
+.navbar-toggle {
+  background-color: #252020;
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 1000px) {
