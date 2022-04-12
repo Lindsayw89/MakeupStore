@@ -41,7 +41,9 @@ const Main=()=>{
             url:'https://swapi.dev/api/people'
         }
         const response= await axios(options)
-        console.log(response.data)
+        console.log(response.data.results)
+        for(const prop in response.data.results)
+        console.log(prop)
     
        
     }
