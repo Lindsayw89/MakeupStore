@@ -235,6 +235,20 @@
           align-items: center;
 }
 
+.address-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.address {
+  margin: 35px;
+}
+
 @media screen and (max-width: 1000px) {
   .mainHeader {
     height: 510px;

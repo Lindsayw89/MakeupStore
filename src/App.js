@@ -14,7 +14,7 @@ import MascaraDetail from './pages/mascaraDetail';
 import NailpolishDetail from './pages/nailpolishDetail';
 import ProductDetails from './pages/productDetails';
 import TopRated from './pages/TopRated';
-
+import FindStore from './pages/findStore';
 
   function App() {
   return (
@@ -33,7 +33,8 @@ import TopRated from './pages/TopRated';
        <Route path='/mascaradetails' element={<MascaraDetail/>} />
        <Route path='/nailpolishdetails' element={<NailpolishDetail/>} />
        <Route path='/foundationdetails' element={<FoundationDetail/>} />
-       
+       <Route path='/findstore' element={<FindStore/>} />
+
        <Route path='/productdetails/:type/:id' element={<ProductDetails/>} />
        <Route path='/toprated' element={<TopRated/>} />
     </Routes>

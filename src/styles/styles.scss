@@ -201,7 +201,15 @@ justify-content: start;
 align-items: center;
 
 }
+.address-container{
+    display: flex;
+    flex-direction: column;
+   
 
+}
+.address{
+    margin: 35px;
+}
 
 
 
